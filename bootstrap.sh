@@ -14,3 +14,10 @@ rm -rf apache-maven
 sudo -u vagrant mv apache-maven-3.3.9 apache-maven
 rm apache-maven-3.3.9-bin.tar.gz
 
+# Setup OpenDaylight development environment
+sudo -u vagrant mkdir -p /home/vagrant/.m2
+pushd /home/vagrant/.m2
+sudo -u vagrant mv -n ~/.m2/settings.xml{,.orig}
+sudo -u vagrant wget https://raw.githubusercontent.com/opendaylight/odlparent/master/settings.xml
+popd
+
