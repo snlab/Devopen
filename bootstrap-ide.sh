@@ -16,3 +16,5 @@ cd ../bin
 sudo -u vagrant ln -s /home/vagrant/c9sdk/bin/c9 c9
 sudo -u vagrant cp /vagrant/start_ide ./
 
+cd ../lib
+sudo -u vagrant cp /vagrant/magellan-dataflow.jar ./
