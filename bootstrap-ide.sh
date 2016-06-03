@@ -7,6 +7,7 @@ sudo -u vagrant mkdir workspace
 sudo -u vagrant git clone https://github.com/c9/core c9sdk
 cd c9sdk
 cp /vagrant/client-workspace-maple.js configs/
+cp /vagrant/maple-config.js configs/
 cd plugins
 sudo -u vagrant git clone https://github.com/snlab/c9.ide.maple
 cd ..

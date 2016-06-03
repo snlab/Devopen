@@ -21,3 +21,9 @@ sudo -u vagrant mv -n ~/.m2/settings.xml{,.orig}
 sudo -u vagrant wget https://raw.githubusercontent.com/opendaylight/odlparent/master/settings.xml
 popd
 
+# Install MapleCore to maven local repository
+sudo -u vagrant git clone https://github.com/snlab/MapleCore.git
+pushd MapleCore
+git checkout new_core_design
+HOME=/home/vagrant sudo -u vagrant mvn clean install -DskipTests
+popd
