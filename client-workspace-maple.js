@@ -43,6 +43,15 @@ module.exports.makeLocal = function(config, options) {
     }, {
       packagePath: "plugins/c9.ide.maple/maple.manager",
       options: options
+    }, {
+      packagePath: "plugins/c9.ide.maple/magellan",
+      options: options
+    }, {
+      packagePath: "plugins/c9.ide.maple/panelMininet",
+      staticPrefix: options.staticPrefix
+    }, {
+      packagePath: "plugins/c9.ide.maple/panelNetwork",
+      options: options
     }
   ].filter(Boolean);
 
