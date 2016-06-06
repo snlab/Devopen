@@ -26,20 +26,21 @@ class MininetSimulator(object):
     def generate_topo(self):
         nodes = self.graph["nodes"]
         edges = self.graph["edges"]
+        name = initiateName(self.graph)
         for node in nodes:
             if node["class"] == "circleHClass":
                 if (ip_re.match(node["title"])):
-                    self.mininet_topo.addHost(node, ip=node["title"])
+                    self.mininet_topo.addHost(name[node["id"]], ip=node["title"])
                 else:
-                    self.mininet_topo.addHost(node)
+                    self.mininet_topo.addHost(name[node["id"]])
             elif node["class"] == "circleSClass":
-                self.mininet_topo.addSwitch(node)
+                self.mininet_topo.addSwitch(name[node["id"]])
         for edge in edges:
             # set link properties here.
             # bw(Mbps), delay, loss, max_queue_size
             # source code is in {mininet_root}/mininet/link.py
             linkopts = dict()
-            self.mininet_topo.addLink(edge[0], edge[1], **linkopts)
+            self.mininet_topo.addLink(name[edge["source"]], name[edge["target"]], **linkopts)
 
     def run(self):
         self.generate_topo()
@@ -53,6 +54,8 @@ class MininetSimulator(object):
         CLI(net)
         net.stop()
 
+def initiateName(graph):
+    return {n["id"]: "h"+str(n["id"]) if n["class"]=="circleHClass" else n["title"] for n in graph["nodes"]}
 
 def main():
     MininetLogger().setLogLevel(levelname="info")

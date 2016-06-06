@@ -17,6 +17,7 @@ cd ../bin
 sudo -u vagrant ln -s /home/vagrant/c9sdk/bin/c9 c9
 sudo -u vagrant cp /vagrant/start_ide ./
 sudo -u vagrant cp /vagrant/mininetSim ./
+ln -s /home/vagrant/bin/mininetSim /usr/local/bin/mininetSim
 
 cd ../lib
 sudo -u vagrant cp /vagrant/magellan-dataflow.jar ./
