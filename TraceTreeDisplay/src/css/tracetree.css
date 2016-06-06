@@ -1,0 +1,35 @@
+.tracetree-node rect {
+    stroke: #999;
+    fill: #fff;
+    stroke-width: 1.5px;
+}
+
+.tracetree-node circle, .tracetree-node ellipse {
+    stroke: #999;
+    fill: #fff;
+    stroke-width: 1.5px;
+}
+
+.edgePath path {
+    stroke: #333;
+    stroke-width: 1.5px;
+}
+
+.label text {
+    font: 300 14px 'Helvetica Neue', Helvetica;
+}
+
+.edgeLabel text {
+    font: 300 14px 'Helvetica Neue', Helvetica;
+    color:tracetree- #333;
+}
+
+.grabbable {
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.grabbing {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}

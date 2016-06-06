@@ -52,6 +52,9 @@ module.exports.makeLocal = function(config, options) {
     }, {
       packagePath: "plugins/c9.ide.maple/panelNetwork",
       options: options
+    }, {
+      packagePath: "plugins/c9.ide.maple/panelTracetree",
+      options: options
     }
   ].filter(Boolean);
 

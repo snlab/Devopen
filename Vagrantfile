@@ -22,6 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   config.vm.network "forwarded_port", guest: 9000, host: 9000
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
   #config.vm.network "private_network", type: "dhcp"
   config.vm.network "private_network", ip: "192.168.56.10", :netmask => "255.255.255.0"
   # config.vm.network "private_network", ip: "192.168.1.100", :netmask => "255.255.255.0"

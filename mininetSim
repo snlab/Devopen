@@ -34,7 +34,7 @@ class MininetSimulator(object):
                 else:
                     self.mininet_topo.addHost(name[node["id"]])
             elif node["class"] == "circleSClass":
-                self.mininet_topo.addSwitch(name[node["id"]])
+                self.mininet_topo.addSwitch(name[node["id"]], protocols="OpenFlow13")
         for edge in edges:
             # set link properties here.
             # bw(Mbps), delay, loss, max_queue_size
@@ -48,7 +48,7 @@ class MininetSimulator(object):
                 controller=RemoteController,
                 link=TCLink,
                 build=False,
-                autoStaticArp=True)
+                autoStaticArp=False)
         net.addController(ip=self.controller_addr)
         net.start()
         CLI(net)

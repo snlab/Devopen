@@ -1,0 +1,39 @@
+{
+  "name": "MapleGUI",
+  "version": "0.0.0",
+  "homepage": "https://github.com/snlab/MapleGUI",
+  "authors": [
+    "David Yu <lewen.yu@gmail.com>"
+  ],
+  "description": "GUI for Maple",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.14.3",
+    "angular-route": "~1.4.8",
+    "d3": "~3.5.5",
+    "angular": "~1.4.8",
+    "jquery": "~2.1.4",
+    "chroma-js": "~1.1.1",
+    "d3-tip": "~0.6.7",
+    "bucketsjs": "~1.90.0",
+    "lodash": "~3.10.1",
+    "bootstrap": "~3.3.6",
+    "cubism": "~1.6.0",
+    "victor": "~1.1.0",
+    "dagre-d3": "~0.4.10",
+    "mousetrap": "~1.5.3",
+    "angular-xeditable": "~0.1.9",
+    "angular-ui-sortable": "~0.13.4"
+  }
+}
